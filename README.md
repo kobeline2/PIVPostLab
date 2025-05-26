@@ -78,6 +78,16 @@ PIVPostLab/
 
    * 将来 App Designer で `pivpostlabApp.mlapp` を追加予定.
 
+## 解析パイプライン
+```mermaid
+graph LR
+  A[load rawData.mat] --> B[cleanData]
+  B --> C[reshapeToGrid]
+  C --> D[computeVorticity]
+  C --> E[computeReynoldsStress]
+  C --> F[plot & export]
+```
+
 ## ロードマップ
 
 | フェーズ | 内容                             |
